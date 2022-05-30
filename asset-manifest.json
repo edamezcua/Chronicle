@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Chronicle/static/css/main.e6c13ad2.css",
+    "main.js": "/Chronicle/static/js/main.298f7d1f.js",
+    "index.html": "/Chronicle/index.html",
+    "main.e6c13ad2.css.map": "/Chronicle/static/css/main.e6c13ad2.css.map",
+    "main.298f7d1f.js.map": "/Chronicle/static/js/main.298f7d1f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.298f7d1f.js"
+  ]
+}
