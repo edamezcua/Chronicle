@@ -60,6 +60,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    
     addPost: async (parent, args, context) => {
       if (context.user) {
         const post = await Post.create({ ...args, username: context.user.username });
@@ -76,27 +77,43 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
 
-    async deletePost(_, { postId }, context) {
-      const user = checkAuth(context);
+    deletePost: async (parent, args, context) => {
+      if (context.user) {
+        const post = await Post.deleteOne({ ...args, username: context.user.username });
 
-      try {
-        const post = await Post.findById(postId);
-        if (user.username === post.username) {
-          await post.delete();
-          return 'Post deleted successfully';
-        } else {
-          throw new AuthenticationError('Action not allowed');
-        }
-      } catch (err) {
-        throw new Error(err);
+        await Post.findByIdAndUpdate(
+          { _id: context.post._id },
+          { $pull: { posts: post._id } },
+          { new: true }
+        );
+
+        return post;
       }
+
+      throw new AuthenticationError('You need to be logged in!');
     },
+
+    // deletePost: async (parent, { postId }, context) {
+    //   // const user = checkAuth(context);
+
+    //   try {
+    //     const post = await Post.findByIdAndDelete(postId);
+    //     if (user.username === post.username) {
+    //       await post.delete();
+    //       return 'Post deleted successfully';
+    //     } else {
+    //       throw new AuthenticationError('Action not allowed');
+    //     }
+    //   } catch (err) {
+    //     throw new Error(err);
+    //   }
+    // },
     
-    addReaction: async (parent, { postId, reactionBody }, context) => {
+    addComment: async (parent, { postId, commentBody }, context) => {
       if (context.user) {
         const updatedPost = await Post.findOneAndUpdate(
           { _id: postId },
-          { $push: { reactions: { reactionBody, username: context.user.username } } },
+          { $push: { comments: { commentBody, username: context.user.username } } },
           { new: true, runValidators: true }
         );
 
