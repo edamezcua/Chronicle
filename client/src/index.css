@@ -4,7 +4,7 @@
   --tertiary: #e0bb71;
   --quatrinary: #f5d085;
   --light: #f7f4ee;
-  --dark: #1864ac;
+  --dark: #164b7c;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -31,8 +31,8 @@ body {
   line-height: 1.5;
   font-size: 20px;
   color:  #1864ac;
-  background-image: url('bg1.jpg');
   border: 3px   #1864ac;
+  background-image: url('./bg1.jpg');
 }
 button {
   float: right;
@@ -60,7 +60,7 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
-  color: #f5d085;
+  color: #164b7c;
 }
 
 h4 {

@@ -1,68 +1,87 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Group Project #2: Meme-Ories
 
-## Available Scripts
+  ## Table-of-Contents
+  * [Description and Task](#description)
+  * [Technology](#technology)
+  * [Video](#video)
+  * [Website](#website)
+  * [License](#license)   
+  * [Contributors](#Contributors)
+  * [Questions](#questions)
 
-In the project directory, you can run:
 
-### `npm start`
+ ## [Description](#description)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To create a social media platform solely for sharing memories and memes.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Given a social media app that allows a user to upload a file to share with friends only.
 
-### `npm test`
+Users must sign up by providing an email, username and password.
+Once signed up they will be logged in.
+Once logged in user will be presented with user profile and feed. 
+User is able to catch up on the latest feed from friends or make a post.
+They're able to click on upload file they will be need to click confirm button.
+ 
+ ## Meme-ories - Application Design and Concept
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Another social media platform but focused on memes! No more following meme accounts on instagram or Twitter, instead join meme-ories where memes and memories live. 
 
-### `npm run build`
+ # Our Task and Application Requirments
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Your project should fulfill the following requirements:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Use React for the front end.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Use GraphQL with a Node.js and Express.js server.
 
-### `npm run eject`
+Use MongoDB and the Mongoose ODM for the database.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Use queries and mutations for retrieving, adding, updating, and deleting data.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Be deployed using Heroku (with data).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Have a polished UI.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Be responsive.
 
-## Learn More
+Be interactive (i.e., accept and respond to user input).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Include authentication (JWT).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Protect sensitive API key information on the server.
 
-### Code Splitting
+Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-### Analyzing the Bundle Size
+ ## [Technology](#technology)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+  - Node.js
+  - MongoDb
+  - Mongoose
+  - Apollo/Client/Server-Express
+  - Bcrypt
+  - React
+  - GraphQL
+  - JWT-decode
+  - Cloudinary
+  - Concurrently
+  - Nodemon
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  ## [Website](#website)
+  Deployed Application: https://guarded-bayou-92967.herokuapp.com/
+   
+  ## [License](#license)
+  The application is covered under the following license:
+![badge](https://img.shields.io/badge/license-apache-blue)
+    
+    
+  ## [Contributors](#contributors)
+  
+    Jose Lemuz, Edgar Amezcua, Rachel Schaaf. 
+    
+  ## [Questions](#questions)
+  Contact Information Below:
+  
+  [GitHub](https://github.com/jlemuz/deep-thoughts2.git)
+  [GitHub](https://github.com/edamezcua/meme-ories.git)

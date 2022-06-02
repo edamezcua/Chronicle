@@ -40,12 +40,10 @@ export const ADD_POST = gql`
 `;
 
 export const DELETE_POST = gql`
-  mutation deletePost($id: String!) {
-    deletePost(_id: $id) {
-      _id
-    }
+  mutation($id: String!) {
+    deletePost(id: $id)
   }
-`;
+`
 
 export const ADD_COMMENT = gql`
   mutation addComment($postId: ID!, $commentBody: String!) {

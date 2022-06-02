@@ -76,39 +76,16 @@ const resolvers = {
 
       throw new AuthenticationError('You need to be logged in!');
     },
-
-    deletePost: async (parent, args, context) => {
-      if (context.user) {
-        const post = await Post.deleteOne({ ...args, username: context.user.username });
-
-        await Post.findByIdAndUpdate(
-          { _id: context.post._id },
-          { $pull: { posts: post._id } },
-          { new: true }
-        );
-
-        return post;
-      }
-
-      throw new AuthenticationError('You need to be logged in!');
-    },
-
-    // deletePost: async (parent, { postId }, context) {
-    //   // const user = checkAuth(context);
-
-    //   try {
-    //     const post = await Post.findByIdAndDelete(postId);
-    //     if (user.username === post.username) {
-    //       await post.delete();
-    //       return 'Post deleted successfully';
-    //     } else {
-    //       throw new AuthenticationError('Action not allowed');
-    //     }
-    //   } catch (err) {
-    //     throw new Error(err);
-    //   }
-    // },
     
+    deletPost: async (parent, { postId }, context) => {
+      if (user.username === post.username) {
+        await Post.findByIdAndDelete(postId);
+        return 'Post deleted successfully';
+      } else {
+        throw new AuthenticationError('Action not allowed');
+      }
+    },
+   
     addComment: async (parent, { postId, commentBody }, context) => {
       if (context.user) {
         const updatedPost = await Post.findOneAndUpdate(
