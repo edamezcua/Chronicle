@@ -1,4 +1,4 @@
-# Group Project #2: Meme-Ories
+# Group Project #3: Meme-Ories
 
   ## Table-of-Contents
   * [Description and Task](#description)

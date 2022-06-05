@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const PostList = ({ posts, title }) => {
@@ -30,7 +30,7 @@ const PostList = ({ posts, title }) => {
                   {post.commentCount ? 'see' : 'start'} a comment!
                 </p>
               </Link>
-              <button>
+              <button type='submit'>
                 <img src='trash.svg' alt='delete'/>
               </button>
             </div>
