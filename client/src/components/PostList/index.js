@@ -1,9 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {useMutation } from '@apollo/client';
+import { DELETE_POST } from '../../utils/mutations';
+
+
+
 
 const PostList = ({ posts, title }) => {
+  const [deletePost] = useMutation(DELETE_POST);
+
   if (!posts.length) {
     return <h3>No Posts Yet</h3>;
+  };
+
+  const handleClick = async () => {
+    try {
+      await deletePost({
+        variables: { postId: posts.this._id },
+      });
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   return (
@@ -30,7 +47,7 @@ const PostList = ({ posts, title }) => {
                   {post.commentCount ? 'see' : 'start'} a comment!
                 </p>
               </Link>
-              <button type='submit'>
+              <button type='submit' onClick={handleClick}>
                 <img src='trash.svg' alt='delete'/>
               </button>
             </div>

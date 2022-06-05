@@ -1,10 +1,10 @@
 :root {
-  --primary: #9b7eeb;
+  --primary: #998d48;
   --secondary:white;
   --tertiary: #e0bb71;
   --quatrinary: #f5d085;
   --light: #f7f4ee;
-  --dark: #164b7c;
+  --dark: #b9ab59;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -30,9 +30,9 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 20px;
-  color:  #1864ac;
-  border: 3px   #1864ac;
-  background-image: url('./bg1.jpg');
+  color:  #b9ab59;
+  border: 3px   #b9ab59;
+  background-image: url('./bgs.jpg');
 }
 button {
   float: right;
@@ -60,7 +60,7 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
-  color: #164b7c;
+  color: #534e30;
 }
 
 h4 {
